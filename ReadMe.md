@@ -1,13 +1,17 @@
-# Lock_Manager
+# Lock-Manager
 The program implements a lock manager with the following capabilities:
 1. Lock a resource in either shared or exclusive mode. 
 2. Unlock a resource held by a transaction.
 
 Compilation:
+```
 make
+```
 
 Run:
+```
 .\main.exe
+```
 
 Upon execution, the program provides instructions on how to use the lock manager.
 The logic of the code is explained via comments contained in the program code.
