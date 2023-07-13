@@ -2,7 +2,7 @@
  * @file main.cpp
  * @author nandand1998@gmail.com
  * @brief A lock manager application
- * @version 0.4 
+ * @version 0.5 
  * 
  */
 
@@ -297,16 +297,7 @@ bool unlock(std::string resource_name,
     // Store the iterator position that points to the record to be deleted
     // (In order to use the same iterator (`lr_iter`), we delete the record after the possible status updates.)
     del_iter = lr_iter;
-    lr_iter++;
-
-    // If the transaction is still waiting for the resource, then it makes no sense
-    // for the transaction to request to unlock the resource!
-    // record = *del_iter;
-    // if (record->getLockStatus() == lockStatus::WAITING)
-    // {
-    //     cerr << "Cannot unlock for a transaction that is still waiting on the resource!\n";
-    //     return false;
-    // }
+    lr_iter++;    
 
     // A lock's status is updated (granted) only if the previous locks are all shared
     // (The second operand here handles the case when the list has just one record (prior to deletion))
