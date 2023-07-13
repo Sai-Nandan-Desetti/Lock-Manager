@@ -18,6 +18,6 @@ The logic of the code is explained via comments contained in the program code.
 
 
 NOTES:
-1. If a resource has been locked once, it stays in the lock table forever (until the program terminates). 
-    - I haven't deleted the resource entry from the lock table when the linked list of lock records it maintains becomes empty assuming that, if it was locked once, it may be locked again.
-    - I didn't find it in the scope of this program to also delete resources from the lock table not used for a certain time.
+* If a resource has been locked once, it stays in the lock table forever (until the program terminates). 
+    * I haven't deleted the resource entry from the lock table when the linked list of lock records it maintains becomes empty assuming that, if it was locked once, it may be locked again.
+    * I didn't find it in the scope of this program to also delete resources from the lock table not used for a certain time.
